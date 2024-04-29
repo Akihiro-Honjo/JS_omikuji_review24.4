@@ -16,21 +16,75 @@
       <h1>じゃんけん</h1>
     </section>
 
-    <section>
+    <section id="cp">
       <p>コンピュータの手は？？</p>
     </section>
 
-    <section>
+    <section id="result">
       <p>勝敗は？？</p>
     </section>
 
     <section>
-      <button>グー</button>
-      <button>チョキ</button>
-      <button>パー</button>
+      <button id="g">グー</button>
+      <button id="c">チョキ</button>
+      <button id="p">パー</button>
     </section>
 
   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+      $('#g').on('click' , function(){
+    const min = 0;
+    const max = 2;
+    const number = Math.floor(Math.random() * (max-min+1)) +min;
+    console.log(number);
+    if(number ===0){
+      $('#cp').text('グー')
+      $('#result').text('あいこ')
+    } else if(number ===1){
+      $('#cp').text('チョキ')
+      $('#result').text('勝ち')
+    }else if(number ===2){
+      $('#cp').text('パー')
+      $('#result').text('負け')
+    }
+  });
+
+  $('#c').on('click' , function(){
+    const min = 0;
+    const max = 2;
+    const number = Math.floor(Math.random() * (max-min+1)) +min;
+    console.log(number);
+    if(number ===0){
+      $('#cp').text('グー')
+      $('#result').text('負け')
+    } else if(number ===1){
+      $('#cp').text('チョキ')
+      $('#result').text('あいこ')
+    }else if(number ===2){
+      $('#cp').text('パー')
+      $('#result').text('勝ち')
+    }
+  });
+
+  $('#p').on('click' , function(){
+    const min = 0;
+    const max = 2;
+    const number = Math.floor(Math.random() * (max-min+1)) +min;
+    console.log(number);
+    if(number ===0){
+      $('#cp').text('グー')
+      $('#result').text('勝ち')
+    } else if(number ===1){
+      $('#cp').text('チョキ')
+      $('#result').text('負け')
+    }else if(number ===2){
+      $('#cp').text('パー')
+      $('#result').text('あいこ')
+    }
+  });
+
+  </script>
 </body>
 
 </html>
